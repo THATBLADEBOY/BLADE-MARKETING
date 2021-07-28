@@ -1,12 +1,6 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-
-const Button = ({ title }) => (
-    <div className={styles.buttonContainer}>
-        <button className={styles.buttonEffect}>{title}</button>
-    </div>
-);
+import { MailToButton, Header, NavBar, ServiceCard } from '../components';
 
 export default function Home() {
     return (
@@ -16,52 +10,48 @@ export default function Home() {
                 <meta name='blade design and development' content='blade digital craftsmanship' />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-
+            <NavBar />
             <main className={styles.main}>
-                <h1 className={styles.title}>Performance and Personality</h1>
-                <p className={styles.description}>High Quality Digital Goods Tailored To You</p>
-                <div className={styles.serviceCard}>
-                    <div>
-                        <h1>E-Commerce</h1>
-                        <p>
-                            Custom tailored web stores designed to fit you and your brand's
-                            personality. Also..they're wicked fast.
-                        </p>
-                        <Button title='Talk About E-Commerce' />
-                    </div>
-                    <Image width='450' height='450' src='/imgs/shopping_cart.png'></Image>
-                </div>
-                <div className={styles.serviceCard}>
-                    <Image width='450' height='450' src='/imgs/blade_parfume.png'></Image>
-                    <div>
-                        <h1>Branding</h1>
-                        <p>
-                            From logo design to full-blown brand style guidelines. We can make you
-                            look like the professional you are.
-                        </p>
-                        <Button title='TALK ABOUT BRANDING' />
-                    </div>
-                </div>
-                <div className={styles.serviceCard}>
-                    <div>
-                        <h1>Custom Solutions</h1>
-                        <p>
-                            Need an app? Have some tedious processes you need automated with
-                            software? We got you.
-                        </p>
-                        <Button title='TALK ABOUT CUSTOM SOLUTIONS' />
-                    </div>
-                    <Image width='450' height='450' src='/imgs/computer_salesman.png'></Image>
-                </div>
+                <Header
+                    title='Performance and Personality'
+                    subTitle='High Quality Digital Goods Tailored To You'
+                />
+                <ServiceCard
+                    title='E-Commerce'
+                    description="Custom tailored web stores designed to fit you and your brand's
+                            personality. Also..they're wicked fast."
+                    mailToButtonTitle='GET E-COMMERCE'
+                    mailToButtonSubject='E-Commerce Inquiry'
+                    imageSrc='/imgs/shopping_cart.png'
+                />
+                <ServiceCard
+                    title='Branding'
+                    description='From logo design to full-blown brand style guidelines. We can make you
+                            look like the professional you are.'
+                    mailToButtonTitle='GET BRANDING'
+                    mailToButtonSubject='Branding/Design Inquiry'
+                    imageSrc='/imgs/blade_parfume.png'
+                    reverse
+                />
+                <ServiceCard
+                    title='Custom Solutions'
+                    description='Need an app? Have some tedious processes you need automated with
+                            software? We got you.'
+                    mailToButtonTitle='GET CUSTOM SOLUTIONS'
+                    mailToButtonSubject='Custom Solution Inquiry'
+                    imageSrc='/imgs/computer_salesman.png'
+                />
                 <h1 className={styles.title}>Need some help?</h1>
-                <p className={styles.description}>
-                    We love what we do, and we're stoked to help you figure out your next move to
+                <p className={styles.contactParagraph}>
+                    We love what we do, and we're stoked to help you figure out your next move and
                     bring your ideas to life.
                 </p>
-                <Button title='CONTACT US' />
+                <MailToButton title='CONTACT' subject="what's up?!" />
             </main>
             <footer className={styles.footer}>
-                Built with <span className={styles.logo}>🤟</span> by BLADE©
+                <p>
+                    Built with<span className={styles.logo}>🤟</span>by BLADE©
+                </p>
             </footer>
         </div>
     );

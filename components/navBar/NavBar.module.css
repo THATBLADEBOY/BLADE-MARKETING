@@ -1,0 +1,17 @@
+.navBarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+
+.navBarContainer h1 {
+    font-size: 3rem;
+}
+
+@media (max-width: 600px) {
+    .navBarContainer h1 {
+        font-size: 2.5rem;
+    }
+}

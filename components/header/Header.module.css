@@ -1,0 +1,40 @@
+.container {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 4rem;
+}
+
+.description {
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+.title,
+.description {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 3rem;
+    }
+    .description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    .description {
+        font-size: 0.75rem;
+    }
+}

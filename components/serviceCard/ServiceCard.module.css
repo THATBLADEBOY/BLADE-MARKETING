@@ -1,0 +1,66 @@
+.serviceCard {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 4rem;
+}
+
+.reverseServiceCard {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    margin: 4rem;
+}
+
+.buttonContainer {
+    margin-top: 36px;
+}
+
+.reverseServiceCard h1,
+.serviceCard h1 {
+    font-size: 3rem;
+}
+
+.reverseServiceCard div,
+.serviceCard div {
+    max-width: 50%;
+}
+
+@media (max-width: 600px) {
+    .reverseServiceCard,
+    .serviceCard {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .reverseServiceCard div,
+    .serviceCard div {
+        max-width: 95%;
+    }
+
+    .serviceCard Image {
+        max-width: 66%;
+    }
+
+    .reverseServiceCard h1,
+    .serviceCard h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .reverseServiceCard p,
+    .serviceCard p {
+        text-align: center;
+    }
+
+    .buttonContainer {
+        text-align: center;
+    }
+
+    .imageContainer {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
