@@ -1,6 +1,17 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { MailToButton, Header, NavBar, ServiceCard } from '../components';
+import { motion } from 'framer-motion';
+
+const boxVariants = {
+    hidden: { scale: 0.8 },
+    visible: {
+        scale: 1,
+        transition: {
+            duration: 0.6,
+        },
+    },
+};
 
 export default function Home() {
     return (
@@ -20,10 +31,12 @@ export default function Home() {
             </Head>
             <NavBar />
             <main className={styles.main}>
-                <Header
-                    title='Performance and Personality'
-                    subTitle='High Quality Digital Goods Tailored To You'
-                />
+                <motion.div initial='hidden' animate='visible' variants={boxVariants}>
+                    <Header
+                        title='Performance and Personality'
+                        subTitle='High Quality Digital Goods Tailored To You'
+                    />
+                </motion.div>
                 <ServiceCard
                     title='E-Commerce'
                     description="Custom tailored web stores designed to fit you and your brand's

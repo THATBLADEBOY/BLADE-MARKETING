@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import styles from './ServiceCard.module.css';
 import { MailToButton } from '..';
 
@@ -19,8 +20,21 @@ export const ServiceCard = ({
                 <MailToButton title={mailToButtonTitle} subject={mailToButtonSubject} />
             </div>
         </div>
-        <div className={styles.imageContainer}>
-            <Image width='450' height='486' src={imageSrc} alt={imageAlt}></Image>
-        </div>
+        <motion.div
+            initial={{ rotate: -15 }}
+            animate={{
+                rotate: 15,
+                transition: {
+                    duration: 0.6,
+                },
+            }}
+            className={styles.imageContainer}>
+            <Image
+                className={styles.imageContainer}
+                width='1013'
+                height='1064'
+                src={imageSrc}
+                alt={imageAlt}></Image>
+        </motion.div>
     </div>
 );
