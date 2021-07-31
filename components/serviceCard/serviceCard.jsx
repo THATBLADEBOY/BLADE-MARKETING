@@ -8,6 +8,7 @@ export const ServiceCard = ({
     mailToButtonTitle,
     mailToButtonSubject,
     imageSrc,
+    imageAlt,
     reverse,
 }) => (
     <div className={reverse ? styles.reverseServiceCard : styles.serviceCard}>
@@ -19,7 +20,7 @@ export const ServiceCard = ({
             </div>
         </div>
         <div className={styles.imageContainer}>
-            <Image width='450' height='486' src={imageSrc}></Image>
+            <Image width='450' height='486' src={imageSrc} alt={imageAlt}></Image>
         </div>
     </div>
 );

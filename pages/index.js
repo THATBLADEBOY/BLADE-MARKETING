@@ -23,6 +23,7 @@ export default function Home() {
                     mailToButtonTitle='GET E-COMMERCE'
                     mailToButtonSubject='E-Commerce Inquiry'
                     imageSrc='/imgs/shopping_cart.png'
+                    imageAlt='shopping cart'
                 />
                 <ServiceCard
                     title='Branding'
@@ -31,6 +32,7 @@ export default function Home() {
                     mailToButtonTitle='GET BRANDING'
                     mailToButtonSubject='Branding/Design Inquiry'
                     imageSrc='/imgs/blade_parfume.png'
+                    imageAlt='perfume bottle with blade logo'
                     reverse
                 />
                 <ServiceCard
@@ -40,6 +42,7 @@ export default function Home() {
                     mailToButtonTitle='GET CUSTOM SOLUTIONS'
                     mailToButtonSubject='Custom Solution Inquiry'
                     imageSrc='/imgs/computer_salesman.png'
+                    imageAlt='computer salesman with eyes crossed out and purple skin'
                 />
                 <h1 className={styles.title}>Need some help?</h1>
                 <p className={styles.contactParagraph}>
@@ -50,7 +53,11 @@ export default function Home() {
             </main>
             <footer className={styles.footer}>
                 <p>
-                    Built with<span className={styles.logo}>🤟</span>by BLADE©
+                    Built with
+                    <span className={styles.logo} alt='love sign language emoji'>
+                        🤟
+                    </span>
+                    by BLADE©
                 </p>
             </footer>
         </div>
