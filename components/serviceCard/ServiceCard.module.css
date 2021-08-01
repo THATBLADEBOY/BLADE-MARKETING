@@ -13,10 +13,6 @@
     margin: 4rem;
 }
 
-.buttonContainer {
-    margin-top: 36px;
-}
-
 .reverseServiceCard h1,
 .serviceCard h1 {
     font-size: 3rem;
@@ -30,8 +26,13 @@
 .imageContainer {
     width: 400px;
 }
+.buttonContainer {
+    margin-top: 36px;
+    max-width: 100%;
+    display: block;
+}
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .reverseServiceCard,
     .serviceCard {
         flex-direction: column-reverse;
@@ -66,6 +67,6 @@
     .imageContainer {
         padding-left: 10%;
         padding-right: 10%;
-        width: 90%;
+        width: 85%;
     }
 }

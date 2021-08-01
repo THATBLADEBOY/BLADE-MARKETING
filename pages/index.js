@@ -27,7 +27,7 @@ export default function Home() {
                     name='description'
                     content='Custom software, websites, e-commerce, and graphic design agency from Nashville, TN.'
                 />
-                <link rel='icon' href='/favicon.ico' />
+                <link rel='icon' href='/blade_favicon.ico' />
             </Head>
             <NavBar />
             <main className={styles.main}>
@@ -45,25 +45,27 @@ export default function Home() {
                     mailToButtonSubject='E-Commerce Inquiry'
                     imageSrc='/imgs/shopping_cart.png'
                     imageAlt='shopping cart'
+                    imageSwingDuration={0.3}
                 />
                 <ServiceCard
                     title='Branding'
-                    description='From logo design to full-blown brand style guidelines. We can make you
+                    description='From logo design to full-blown brand guidelines. We can make you
                             look like the professional you are.'
                     mailToButtonTitle='GET BRANDING'
                     mailToButtonSubject='Branding/Design Inquiry'
                     imageSrc='/imgs/blade_parfume.png'
                     imageAlt='perfume bottle with blade logo'
+                    imageSwingDuration={0.9}
                     reverse
                 />
                 <ServiceCard
                     title='Custom Solutions'
-                    description='Need an app? Have some tedious processes you need automated with
-                            software? We got you.'
+                    description='Need custom tools or processes to drive your business? From apps to bots, we got you.'
                     mailToButtonTitle='GET CUSTOM SOLUTIONS'
                     mailToButtonSubject='Custom Solution Inquiry'
                     imageSrc='/imgs/computer_salesman.png'
                     imageAlt='computer salesman with eyes crossed out and purple skin'
+                    imageSwingDuration={0.4}
                 />
                 <h1 className={styles.title}>Need some help?</h1>
                 <p className={styles.contactParagraph}>
